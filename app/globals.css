@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* JMJ Solutions — Design tokens (Tailwind v4 @theme) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  /* Colors */
+  --color-primary: #D2042D;
+  --color-primary-hover: #b80326;
+  --color-primary-muted: #fce8ec;
+  --color-secondary: #2dd4bf;
+  --color-secondary-muted: #e6faf8;
+  --color-accent: #fde047;
+  --color-accent-muted: #fefce8;
+  --color-surface: #F2F0EB;
+  --color-ink: #1c1917;
+  --color-ink-muted: #57534e;
+  --color-border: #e7e5e4;
+  /* Spacing */
+  --spacing-section: 4rem;
+  --spacing-block: 1.5rem;
+  /* Radius */
+  --radius-card: 1rem;
+  --radius-button: 0.75rem;
+  --radius-badge: 9999px;
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-card-hover: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  /* Typography — applied via CSS variables in layout */
+  --font-heading: var(--font-urbanist);
+  --font-body: var(--font-inter);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #F2F0EB;
+  --foreground: #1c1917;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Headings use Urbanist */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-urbanist), system-ui, sans-serif;
 }

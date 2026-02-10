@@ -1,0 +1,19 @@
+{
+  "logo": {
+    "text": "JMJ Solutions",
+    "href": "/#",
+    "ariaLabel": "JMJ Solutions — Home"
+  },
+  "links": [
+    { "label": "Home", "href": "/#" },
+    { "label": "About", "href": "/#why-us" },
+    { "label": "Reviews", "href": "/#testimonials" },
+    { "label": "Categories", "href": "/#categories" },
+    { "label": "Contact", "href": "/#contact" }
+  ],
+  "cta": {
+    "label": "Order your gift",
+    "href": "/#contact",
+    "ariaLabel": "Order your gift"
+  }
+}
