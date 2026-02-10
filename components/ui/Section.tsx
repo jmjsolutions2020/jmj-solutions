@@ -9,6 +9,8 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
   title?: string;
   /** Optional short subheading */
   subtitle?: string;
+  /* Optional section type */
+  type?: "default" | "primary";
 }
 
 export function Section({
@@ -17,6 +19,7 @@ export function Section({
   id,
   title,
   subtitle,
+  type = "default",
   ...props
 }: SectionProps) {
   return (
@@ -25,16 +28,16 @@ export function Section({
       className={`py-12 md:py-16 ${className}`}
       {...props}
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className={`mx-auto max-w-7xl px-4 sm:px-6 rounded-4xl ${type=="primary" ? "bg-primary py-10" : ""}`}>
         {(title || subtitle) && (
           <header className="mb-8 md:mb-10 text-center">
             {title && (
-              <h2 className="text-2xl font-bold tracking-tight text-stone-900 md:text-3xl">
+              <h2 className={`text-3xl font-bold tracking-tight md:text-5xl ${type=="primary" ? "text-white" : "text-stone-900"}`}>
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="mt-2 max-w-2xl mx-auto text-stone-600 text-sm md:text-base">
+              <p className={`mt-2.5 md:mt-4 max-w-2xl mx-auto text-sm md:text-base ${type=="primary" ? "text-gray-200" : "text-stone-600"}`}>
                 {subtitle}
               </p>
             )}
