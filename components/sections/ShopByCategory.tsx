@@ -1,46 +1,70 @@
-import {
-  Coffee,
-  Square,
-  Shirt,
-  KeyRound,
-  Briefcase,
-  type LucideIcon,
-} from "lucide-react";
-import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
+"use client";
 
-const CATEGORIES: { icon: LucideIcon; label: string }[] = [
-  { icon: Coffee, label: "Mugs" },
-  { icon: Square, label: "Cushions & Pillows" },
-  { icon: Shirt, label: "T-Shirts" },
-  { icon: KeyRound, label: "Keychains & Small Gifts" },
-  { icon: Briefcase, label: "Corporate Gifts" },
-];
+import { useState } from "react";
+import { Section } from "@/components/ui/Section";
+import { CategoryNavigationBar } from "@/components/ui/CategoryNavigationBar";
+import { CategoryCard } from "@/components/ui/CategoryCard";
+import { SHOP_CATEGORIES } from "@/data/shopCategories";
+import { ArrowRightCircleIcon } from "lucide-react";
 
 export function ShopByCategory() {
+  const [activeCategory, setActiveCategory] = useState(SHOP_CATEGORIES[0].id);
+
+  const currentCategory = SHOP_CATEGORIES.find(
+    (cat) => cat.id === activeCategory
+  );
+
+  if (!currentCategory) return null;
+
   return (
     <Section
       id="categories"
-      title="Shop by category"
-      subtitle="Choose what you want to personalise — we take care of the rest."
+      title="Shop By Category"
+      subtitle="Choose what you want to personalise - we take care of the rest."
+      className="overflow-x-hidden"
     >
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {CATEGORIES.map(({ icon: Icon, label }) => (
-          <li key={label}>
-            <a href="#contact" className="block h-full">
-              <Card
-                hover
-                className="flex h-full flex-col items-center justify-center gap-3 py-6 text-center"
-              >
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-muted text-primary">
-                  <Icon className="h-7 w-7" strokeWidth={2} />
-                </span>
-                <span className="font-medium text-stone-900">{label}</span>
-              </Card>
-            </a>
-          </li>
+
+      {/* Horizontal scrolling gallery */}
+      <div className="relative">
+        <div className="flex gap-4 pb-4 px-4 md:-mx-8 md:px-8 mt-20 max-w-7xl mx-auto overflow-x-auto" style={{scrollbarWidth: 'none'}}>
+        <div>
+          {/* Category card for the current category */}
+          <CategoryCard
+            key={currentCategory.id}
+            name={currentCategory.name}
+            description={currentCategory.description}
+            startingPrice={currentCategory.startingPrice}
+            image={currentCategory.image}
+            isFirstCard={true}
+          />
+        </div>
+        <div className="relative flex gap-4 bg-stone-900 px-4 py-4 rounded-4xl items-center ">
+          {currentCategory.items.map((item) => (
+          <CategoryCard
+            key={item.id}
+            name={item.name}
+            description={item.description}
+            startingPrice={item.startingPrice}
+            image={item.image}
+          />
         ))}
-      </ul>
+        </div>
+      </div>
+      {/* Right Arrow to indicate more items */}
+      <div className="absolute right-0 top-0 bottom-0 flex justify-center items-center">
+        <ArrowRightCircleIcon className="w-12 h-12 bg-white text-stone-900 shadow-lg top-1/2 -translate-y-1/2 rounded-full p-2" />
+      </div>
+      <div className="absolute bg-stone-900 w-10 sm:w-24 h-100 -right-8 top-0 -z-1 rounded-2xl"></div>
+      </div>
+
+      {/* Category Navigation Bar */}
+      <div className="flex justify-center my-8">
+        <CategoryNavigationBar
+          categories={SHOP_CATEGORIES}
+          activeCategory={activeCategory}
+          onCategoryChange={setActiveCategory}
+        />
+      </div>
     </Section>
   );
 }
