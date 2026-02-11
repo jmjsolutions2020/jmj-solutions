@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
+import Bestsellers from "@/components/sections/Bestsellers";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <ShopByCategory />
+        <Bestsellers />
         <HowItWorks />
         <WhyChoose />
         <AIImageEnhancement />

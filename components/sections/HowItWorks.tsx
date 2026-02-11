@@ -6,19 +6,19 @@ const STEPS = [
     step: 1,
     icon: Package,
     title: "Choose your product",
-    text: "Pick from mugs, cushions, t-shirts, keychains or corporate sets.",
+    text: "Select from mugs, tshirts, cushions, keychains or bundles. We provide wide range of customized gifts.",
   },
   {
     step: 2,
     icon: Upload,
-    title: "Upload your photo or design",
-    text: "Send us the image or text you want printed. Low-quality image? We optimise it automatically for better print clarity.",
+    title: "Upload your image",
+    text: "Send us the image or text you want printed. Low quality image? We optimise it automatically for better print clarity.",
   },
   {
     step: 3,
     icon: Truck,
     title: "We print & deliver",
-    text: "Quality-checked printing and delivery in Gurugram & NCR. Bulk orders get dedicated timelines.",
+    text: "Quality-checked printing and delivery in Gurugram. You can also pickup your order from our shop. Bulk orders get dedicated timelines.",
   },
 ];
 
@@ -29,7 +29,7 @@ export function HowItWorks() {
       title="How it works"
       subtitle="Three simple steps from idea to delivered gift."
     >
-      <ol className="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <ol className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-20">
         {STEPS.map(({ step, icon: Icon, title, text }) => (
           <li key={step} className="relative text-center">
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary-muted text-secondary">
