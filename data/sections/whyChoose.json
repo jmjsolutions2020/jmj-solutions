@@ -1,0 +1,32 @@
+{
+  "title": "Why choose JMJ Solutions",
+  "subtitle": "We focus on what matters: quality, value and reliability.",
+  "items": [
+    {
+      "icon": "IndianRupee",
+      "title": "Budget-friendly pricing",
+      "text": "Great value for personalised gifts without compromising on quality."
+    },
+    {
+      "icon": "CheckCircle2",
+      "title": "Quality-checked prints",
+      "text": "Every order is checked before dispatch so you get a product you can gift with confidence."
+    },
+    {
+      "icon": "MapPin",
+      "title": "Local fulfilment",
+      "text": "Based in Gurugram — faster delivery in NCR and a store you can visit for larger orders."
+    },
+    {
+      "icon": "Briefcase",
+      "title": "Corporate bulk expertise",
+      "text": "Dedicated handling for HR, events and branding with consistent quality and reliable timelines."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Complimentary image optimisation",
+      "text": "We improve low-resolution images for better print clarity at no extra cost."
+    }
+  ]
+}
+

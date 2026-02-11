@@ -6,19 +6,19 @@ import { useState } from "react";
 
 const ITEMS = [
   {
-    question: "How long does delivery take?",
+    question: "How long will my order take?",
     answer:
-      "For Gurugram and NCR we typically deliver within 3–5 business days after print. Bulk orders may take 7–10 days depending on quantity. We’ll confirm timelines when you place your order.",
+      "Standard items: 3–5 business days. Bulk orders: depends on quantity — we'll confirm in the quote.",
   },
   {
-    question: "Do you do bulk or corporate orders?",
+    question: "Do you offer same-day pickup?",
     answer:
-      "Yes. We handle bulk orders for HR, events and branding. You get dedicated coordination, bulk pricing and reliable delivery windows. Use the contact form or WhatsApp to request a quote.",
+      "Yes for in-store ready items — call/WhatsApp to confirm.",
   },
   {
     question: "What if my image is low quality or blurry?",
     answer:
-      "We use a print-optimisation step to improve clarity of low-resolution images so prints look better. This improves sharpness and contrast for print; it doesn’t alter faces or content. It’s included at no extra cost.",
+      "We automatically optimize images for better print clarity using AI-assisted enhancement when required. It’s included at no extra cost.",
   },
   {
     question: "What payment options do you accept?",

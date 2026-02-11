@@ -1,0 +1,22 @@
+{
+  "title": "How it works",
+  "subtitle": "Three simple steps from idea to delivered gift.",
+  "steps": [
+    {
+      "icon": "Package",
+      "title": "Choose your product",
+      "text": "Pick from mugs, cushions, t-shirts, keychains or corporate sets."
+    },
+    {
+      "icon": "Upload",
+      "title": "Upload your photo or design",
+      "text": "Send us the image or text you want printed. Low-quality image? We optimise it automatically for better print clarity."
+    },
+    {
+      "icon": "Truck",
+      "title": "We print & deliver",
+      "text": "Quality-checked printing and delivery in Gurugram & NCR. Bulk orders get dedicated timelines."
+    }
+  ]
+}
+

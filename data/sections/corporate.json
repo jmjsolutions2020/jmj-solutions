@@ -1,0 +1,17 @@
+{
+  "title": "Corporate gifting",
+  "subtitle": "Bulk branded gifts for teams, clients and events — handled with care.",
+  "cardIcon": "Briefcase",
+  "cardTitle": "Events, HR & branding",
+  "cardBody": "We handle bulk orders for corporate events, employee gifting and client giveaways. Get a custom quote with bulk pricing and delivery timelines.",
+  "points": [
+    { "icon": "Users", "text": "HR onboarding kits, festival gifts & event takeaways" },
+    { "icon": "IndianRupee", "text": "Bulk pricing and consistent branding across items" },
+    { "icon": "Calendar", "text": "Reliable timelines so your events run on schedule" },
+    { "icon": "Award", "text": "Quality-checked prints and packaging" }
+  ],
+  "cta": { "label": "Request bulk quote", "href": "#contact" },
+  "sideLabel": "Why bulk with us",
+  "sideBody": "Same quality as our retail orders, with dedicated coordination for quantities, artwork and delivery windows. Ideal for Diwali, New Year, onboarding and client appreciation."
+}
+

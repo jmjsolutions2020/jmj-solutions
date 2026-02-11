@@ -9,7 +9,7 @@ const TRUST_BADGES = [
 
 export function Hero() {
   return (
-    <header className="relative overflow-hidden bg-[var(--color-surface)] pt-8 pb-16 md:pt-12 md:pb-24">
+    <header className="relative overflow-hidden bg-surface pt-8 pb-16 md:pt-12 md:pb-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-muted px-4 py-1.5 text-sm font-medium text-primary">

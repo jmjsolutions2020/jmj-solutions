@@ -1,0 +1,22 @@
+{
+  "title": "Get in touch",
+  "subtitle": "Order your gift, ask a question or request a bulk quote. We’re here to help.",
+  "detailsTitle": "Contact details",
+  "whatsapp": {
+    "label": "WhatsApp",
+    "href": "https://wa.me/9971047797",
+    "display": "WhatsApp · 99710 47797"
+  },
+  "email": { "href": "mailto:jmjsolutions2020@gmail.com", "display": "jmjsolutions2020@gmail.com" },
+  "phone": { "href": "tel:+919971047797", "display": "+91 99710 47797" },
+  "location": {
+    "title": "Visit us",
+    "address": "JMJ Solutions, J-26, Ashok Vihar Phase 2, Gurugram - 122001"
+  },
+  "map": {
+    "iframeSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.6512568666717!2d77.0165408!3d28.490047500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d35574c383%3A0x4b850cfbe71eede8!2sJMJ%20Solutions!5e0!3m2!1sen!2sin!4v1770706087487!5m2!1sen!2sin",
+    "width": 500,
+    "height": 350
+  }
+}
+

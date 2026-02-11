@@ -1,24 +1,29 @@
 import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
+import { TestimonialCard } from "@/components/ui/TestimonialCard";
+import { ArrowRightCircleIcon } from "lucide-react";
+import Link from "next/link";
 
 const TESTIMONIALS = [
   {
     quote:
-      "Ordered personalised mugs for our team offsite. Quality was good and they delivered on time. Will use again for Diwali gifts.",
-    author: "Priya M.",
-    context: "Corporate order, Gurugram",
+      "Recently ordered birthday mugs, print quality was so good and they were delivered by the next day. Highly recommend!",
+    author: "Jatin K.",
+    context: "Customer",
+    rating: 5,
   },
   {
     quote:
-      "Got a custom cushion with our photo for Mom’s birthday. She loved it. Price was reasonable and the print was clear.",
-    author: "Rahul K.",
-    context: "Personalised gift",
+      "Got a custom cushion with our photo for Mom's birthday. She loved it. Price was reasonable and the print was clear.",
+    author: "Mahak",
+    context: "Customer",
+    rating: 5,
   },
   {
     quote:
-      "We needed 200 branded t-shirts for an event. JMJ handled the bulk order smoothly and the finish was consistent.",
-    author: "Neha S.",
-    context: "Event branding, NCR",
+      "Recently bought a magic mug in which image appears on pouring hot beverages. Really amazed and liked the quality.",
+    author: "Juhi",
+    context: "Customer",
+    rating: 5,
   },
 ];
 
@@ -26,22 +31,30 @@ export function Testimonials() {
   return (
     <Section
       id="testimonials"
-      title="What customers say"
-      subtitle="Real feedback from people who ordered personalised and corporate gifts."
+      title="What Customers say"
+      subtitle="Real feedback from people who ordered personalised gifts."
     >
-      <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {TESTIMONIALS.map(({ quote, author, context }) => (
+      <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 pt-4 px-4">
+        {TESTIMONIALS.map(({ quote, author, context, rating }) => (
           <li key={author}>
-            <Card className="h-full flex flex-col">
-              <p className="text-stone-700">&ldquo;{quote}&rdquo;</p>
-              <div className="mt-4 pt-4 border-t border-stone-100">
-                <p className="font-medium text-stone-900">{author}</p>
-                <p className="text-xs text-stone-500">{context}</p>
-              </div>
-            </Card>
+            <TestimonialCard
+              quote={quote}
+              author={author}
+              context={context}
+              rating={rating}
+            />
           </li>
         ))}
       </ul>
+      <div className="mt-8 text-center">
+        <Link
+          href="https://g.page/r/CejtHuf7DIVLEBM/review"
+          target="_blank"
+          className="group flex flex-row items-center justify-center gap-1.5 text-sm hover:underline font-medium text-primary"
+        >
+          Write a review <ArrowRightCircleIcon size={16} className="group-hover:translate-x-1 transition-transform duration-200"></ArrowRightCircleIcon>
+        </Link>
+      </div>
     </Section>
   );
 }
