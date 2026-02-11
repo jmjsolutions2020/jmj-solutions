@@ -2,10 +2,11 @@ import {
   IndianRupee,
   CheckCircle2,
   MapPin,
-  Briefcase,
   Sparkles,
+  LucideIcon,
 } from "lucide-react";
 import { Section } from "@/components/ui/Section";
+import Image from "next/image";
 
 const REASONS = [
   {
@@ -16,17 +17,12 @@ const REASONS = [
   {
     icon: CheckCircle2,
     title: "Quality-checked prints",
-    text: "Every order is checked before dispatch so you get a product you can gift with confidence.",
+    text: "Every order is checked before hand off, so you get a product you can gift with confidence.",
   },
   {
     icon: MapPin,
-    title: "Local fulfilment",
-    text: "Based in Gurugram — faster delivery in NCR and a store you can visit for larger orders.",
-  },
-  {
-    icon: Briefcase,
-    title: "Corporate bulk expertise",
-    text: "Dedicated handling for HR, events and branding with consistent quality and reliable timelines.",
+    title: "Local Delivery & Store",
+    text: "Based in Gurugram, free and quick delivery within 3km and you can also visit the shop.",
   },
   {
     icon: Sparkles,
@@ -42,19 +38,65 @@ export function WhyChoose() {
       title="Why choose JMJ Solutions"
       subtitle="We focus on what matters: quality, value and reliability."
     >
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-        {REASONS.map(({ icon: Icon, title, text }) => (
-          <li key={title}>
-            <div className="flex h-full flex-col rounded-xl border border-stone-200 bg-white p-5 shadow-sm">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-muted text-primary">
-                <Icon className="h-6 w-6" strokeWidth={2} />
-              </span>
-              <h3 className="mt-4 font-semibold text-stone-900">{title}</h3>
-              <p className="mt-2 text-sm text-stone-600">{text}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className="md:mt-20">
+        {/* Desktop layout: Reasons on sides, image in center */}
+        <div className="hidden lg:flex gap-20 items-center justify-center">
+        <div>
+          <ul className="grid grid-cols-1 gap-6">
+          {REASONS.slice(0,2).map(({ icon, title, text }) => (
+            <li key={title}>
+              <ReasonCard icon={icon} title={title} text={text} />
+            </li>
+          ))}
+        </ul>
+        </div>
+        <div className="w-1/3">
+          <Image src="/images/why-choose.jpg" alt="Why choose us" width={300} height={400} className="h-auto w-full object-cover rounded-2xl shadow-sm aspect-3/4 bg-white" />
+        </div>
+        <div>
+          <ul className="grid grid-cols-1 gap-6">
+          {REASONS.slice(2,4).map(({ icon, title, text }) => (
+            <li key={title}>
+              <ReasonCard icon={icon} title={title} text={text} />
+            </li>
+          ))}
+        </ul>
+        </div>
+      </div>
+      {/* Mobile layout: Image on top, reasons in a list below */}
+      <div className="flex flex-col items-center lg:hidden">
+        <div className="px-4 my-10 w-full sm:w-1/2">
+          <Image src="/images/why-choose.jpg" alt="Why choose us" width={400} height={300} className="h-auto w-full object-cover rounded-2xl shadow-sm aspect-3/4 bg-white" />
+        </div>
+        <ul className="grid grid-cols-1 gap-6">
+          {REASONS.map(({ icon, title, text }) => (
+            <li key={title}>
+              <ReasonCard icon={icon} title={title} text={text} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      </div>
     </Section>
+  );
+}
+
+function ReasonCard({
+  icon: Icon,
+  title,
+  text,
+}: {
+  icon: LucideIcon;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="flex h-full flex-col rounded-xl p-5 justify-center items-center text-center max-w-sm">
+      <span className="flex h-12 w-12 items-center justify-center rounded-xl border-2 border-primary bg-primary-muted text-primary">
+        <Icon className="h-6 w-6" strokeWidth={2} />
+      </span>
+      <h3 className="mt-4 font-semibold text-stone-900 text-lg">{title}</h3>
+      <p className="mt-2 text-sm text-stone-600">{text}</p>
+    </div>
   );
 }

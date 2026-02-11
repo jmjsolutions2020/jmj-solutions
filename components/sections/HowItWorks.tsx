@@ -32,7 +32,7 @@ export function HowItWorks() {
       <ol className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-20">
         {STEPS.map(({ step, icon: Icon, title, text }) => (
           <li key={step} className="relative text-center">
-            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary-muted text-secondary">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary-muted text-secondary border-2 border-secondary">
               <Icon className="h-7 w-7" strokeWidth={2} />
             </div>
             <h3 className="text-lg font-semibold text-stone-900">{title}</h3>
