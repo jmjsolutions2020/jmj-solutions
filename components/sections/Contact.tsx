@@ -23,7 +23,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 text-gray-200 hover:underline underline-offset-2 focus-visible:rounded focus-visible:ring-2 focus-visible:ring-primary"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary-muted text-secondary">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-100 text-green-500">
                   <MessageCircle className="h-5 w-5" strokeWidth={2} />
                 </span>
                 WhatsApp · 99710 47797
