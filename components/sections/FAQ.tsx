@@ -3,8 +3,10 @@
 import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { useState } from "react";
+import JsonLd from "@/components/seo/JsonLd";
+import { faqLd } from "@/lib/seo";
 
-const ITEMS = [
+export const ITEMS = [
   {
     question: "How long will my order take?",
     answer:
@@ -36,6 +38,8 @@ export function FAQ() {
       title="Frequently asked questions"
       subtitle="Quick answers to common questions."
     >
+      {/* FAQ structured data for SEO */}
+      <JsonLd data={faqLd(ITEMS)} />
       <ul className="mx-auto max-w-2xl space-y-2">
         {ITEMS.map(({ question, answer }, index) => (
           <li

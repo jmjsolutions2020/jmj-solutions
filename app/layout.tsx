@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { websiteLd, organizationLd } from "@/lib/seo";
 import { Urbanist, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
@@ -43,8 +44,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jmj-solutions.vercel.app";
+  const orgJson = organizationLd({
+    name: "JMJ Solutions",
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    sameAs: ["https://www.facebook.com/", "https://www.instagram.com/"],
+  });
+
+  const siteJson = websiteLd({ name: "JMJ Solutions", url: siteUrl });
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJson) }}
+        />
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJson) }}
+        />
+      </head>
       <body
         className={`${urbanist.variable} ${inter.variable} ${instrumentSerif.variable} antialiased`}
       >
