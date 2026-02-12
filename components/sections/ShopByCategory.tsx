@@ -51,9 +51,10 @@ export function ShopByCategory() {
         </div>
       </div>
       {/* Right Arrow to indicate more items */}
-      <div className="absolute right-0 top-0 bottom-0 flex justify-center items-center">
+      <div className="absolute right-0 top-0 bottom-0 flex justify-center items-center hover:animate-pulse">
         <ArrowRightCircleIcon className="w-12 h-12 bg-white text-stone-900 shadow-lg top-1/2 -translate-y-1/2 rounded-full p-2" />
       </div>
+
       <div className="absolute bg-stone-900 w-10 sm:w-24 h-100 -right-8 top-0 -z-1 rounded-2xl"></div>
       </div>
 

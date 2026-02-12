@@ -1,7 +1,9 @@
 "use client";
 
 import { Section } from "@/components/ui/Section";
+import { EXTRA_IMAGES } from "@/data/images";
 import { StarsIcon } from "lucide-react";
+import Image from "next/image";
 
 export function AIImageEnhancement() {
   return (
@@ -30,8 +32,15 @@ export function AIImageEnhancement() {
             </div>
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm w-full max-w-3xl">
-            <div className="relative w-full h-64 md:h-80 lg:h-96"></div>
+          <div className="relative rounded-2xl overflow-hidden bg-white shadow-sm w-full max-w-3xl">
+            <div className="relative w-full h-64 md:h-80 lg:h-96">
+              <Image
+                src={EXTRA_IMAGES.ai_retouching}
+                alt="AI Image Retouching"
+                fill
+                className="object-cover w-full h-full scale-105"
+              />
+            </div>
           </div>
 
           <div className="mt-6 max-w-2xl text-stone-700 pl-2">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BsWhatsapp } from "react-icons/bs";
 import { Button } from "../ui/Button";
 import Link from "next/link";
+import { CORPORATE_IMAGES } from "@/data/images";
 
 export function CorporateGifting() {
   return (
@@ -34,9 +35,9 @@ export function CorporateGifting() {
           <ClientBadges count={10} />
           <div>
             <StackedGallery
-              mainSrc="/images/corp-main.jpg"
-              thumbTop="/images/corp-thumb1.jpg"
-              thumbBottom="/images/corp-thumb2.jpg"
+              mainSrc={CORPORATE_IMAGES.mugs}
+              thumbTop={CORPORATE_IMAGES.mugs}
+              thumbBottom={CORPORATE_IMAGES.tshirts}
               alt="Corporate gifts"
             />
           </div>
@@ -50,9 +51,9 @@ function ClientBadges({ count = 10 }: { count?: number }) {
   return (
     <div className="flex items-center gap-1 justify-end pr-2">
       <div className="flex -space-x-1.5">
-        <Image src="/images/client1.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
-        <Image src="/images/client2.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
-        <Image src="/images/client3.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
+        <Image src="/corporate-clients/go-fast-delivery-logo.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
+        <Image src="/corporate-clients/shushruta-genomics-logo.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
+        <Image src="/corporate-clients/puja-fashion-logo.jpg" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
       </div>
       <span className="ml-2 inline-flex items-center rounded-full py-1 text-sm font-semibold">{count}+ corporate clients</span>
     </div>
@@ -72,7 +73,7 @@ function StackedGallery({ mainSrc, thumbTop, thumbBottom, alt = 'Gallery' }: Sta
   return (
     <div className="relative flex flex-col md:flex-row items-start gap-4 md:aspect-video">
       <div className="rounded-2xl overflow-hidden shadow-sm w-full h-full bg-white aspect-5/4 md:aspect-auto">
-        <Image src={mainSrc} alt={`${alt} main`} fill className="h-full w-full object-cover rounded-2xl" />
+        <Image src={mainSrc} alt={`${alt} main`} width={400} height={400} className="h-full w-full object-cover rounded-2xl" />
       </div>
 
       <div className="flex flex-row md:flex-col gap-4 justify-center w-full h-full md:w-2/6">
