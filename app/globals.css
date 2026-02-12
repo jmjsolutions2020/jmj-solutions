@@ -28,7 +28,7 @@
   --font-heading: var(--font-urbanist);
   --font-body: var(--font-inter);
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
 }
 
 :root {

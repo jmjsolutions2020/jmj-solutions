@@ -19,7 +19,7 @@ export function Navbar() {
     <header className="sticky top-0 z-30 w-full px-3 py-3 md:px-6">
       <div className=" mx-auto w-full max-w-[1232px] px-4 md:px-0">
         <div
-          className="relative flex w-full items-center justify-between gap-4 rounded-full bg-stone-100 px-5 py-4 shadow-sm lg:justify-start md:px-6 md:py-3"
+          className="relative flex w-full items-center justify-between gap-4 rounded-full bg-white/40 backdrop-blur-lg px-5 py-4 shadow-sm lg:justify-start md:px-6 md:py-3"
         >
           <Logo data={data.logo} />
 

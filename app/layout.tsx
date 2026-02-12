@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Urbanist, Inter, Geist_Mono } from "next/font/google";
+import { Urbanist, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const urbanist = Urbanist({
@@ -12,9 +12,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${urbanist.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${urbanist.variable} ${inter.variable} ${instrumentSerif.variable} antialiased`}
       >
         {children}
       </body>
