@@ -1,0 +1,23 @@
+<svg width="422" height="424" viewBox="0 0 422 424" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<line x1="11.5" y1="1" x2="11.5" y2="423" stroke="black"/>
+<line x1="91.4999" y1="1" x2="91.4999" y2="423" stroke="black"/>
+<line x1="171.5" y1="1" x2="171.5" y2="423" stroke="black"/>
+<line x1="251.5" y1="1" x2="251.5" y2="423" stroke="black"/>
+<line x1="331.5" y1="1" x2="331.5" y2="423" stroke="black"/>
+<line x1="411.5" y1="1" x2="411.5" y2="423" stroke="black"/>
+<line y1="411.5" x2="422" y2="411.5" stroke="black"/>
+<line y1="331.5" x2="422" y2="331.5" stroke="black"/>
+<line y1="251.5" x2="422" y2="251.5" stroke="black"/>
+<line y1="171.5" x2="422" y2="171.5" stroke="black"/>
+<line y1="91.5" x2="422" y2="91.5" stroke="black"/>
+<line y1="11.5" x2="422" y2="11.5" stroke="black"/>
+<rect x="0.999878" width="421" height="424" fill="url(#paint0_radial_29_382)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_29_382" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(211.5 212) rotate(90) scale(212 210.5)">
+<stop stop-color="#F2F0EB" stop-opacity="0"/>
+<stop offset="1" stop-color="#F2F0EB"/>
+</radialGradient>
+</defs>
+</svg>
