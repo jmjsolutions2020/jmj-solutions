@@ -19,24 +19,48 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jmj-solutions.vercel.app";
+
 export const metadata: Metadata = {
   title: "JMJ Solutions | Customized Gifts in Gurugram — Mugs, Cushions, T-Shirts & Corporate Gifting",
   description:
     "Customized gifts in Gurugram: personalised mugs, cushions, t-shirts, keychains & bulk corporate gifts. Budget-friendly, quality prints, fast delivery. Order your gift today.",
   keywords: [
-    "customized gifts Gurugram",
-    "personalised mugs",
-    "custom cushions",
+    "gift shop",
+    "gift shop in gurugram",
+    "mugs",
+    "cushions",
     "printed t-shirts",
     "corporate gifts Gurugram",
-    "bulk gifting",
+    "gifts",
     "JMJ Solutions",
   ],
+  verification:{
+    google: "t8LnGKCX6OCsQUaKQYIMnGrkixa0HOh_gVvo8Qs523M",
+  },
   openGraph: {
     title: "JMJ Solutions — Customized Gifts | Gurugram",
     description:
       "Personalised mugs, cushions, t-shirts & corporate gifts in Gurugram. Affordable, quality-checked, fast delivery.",
+      siteName: "JMJ Solutions",
+      url: siteUrl,
+      type: "website",
+      images: [
+        {
+          url: `${siteUrl}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: "JMJ Solutions - Customized Gifts in Gurugram",
+        },
+      ],
   },
+  twitter:{
+    card: "summary_large_image",
+    title: "JMJ Solutions — Customized Gifts | Gurugram",
+    description:
+      "Personalised mugs, cushions, t-shirts & corporate gifts in Gurugram. Affordable, quality-checked, fast delivery.",
+    images: [`${siteUrl}/og-image.png`],
+  }
 };
 
 export default function RootLayout({
@@ -58,12 +82,10 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJson) }}
         />
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJson) }}
         />
       </head>
