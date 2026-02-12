@@ -29,7 +29,7 @@ export function HowItWorks() {
       title="How it works"
       subtitle="Three simple steps from idea to delivered gift."
     >
-      <ol className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-20">
+      <ol className="grid grid-cols-1 gap-10 md:grid-cols-3 mt-20">
         {STEPS.map(({ step, icon: Icon, title, text }) => (
           <li key={step} className="relative text-center">
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary-muted text-secondary border-2 border-secondary">

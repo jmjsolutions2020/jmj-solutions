@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function AIImageEnhancement() {
   return (
-    <Section id="ai-retouch">
+    <Section id="ai-retouch" className="md:my-20">
       <div className="flex lg:flex-row flex-col lg:justify-between items-center gap-12 lg:gap-28">
         {/* Left Side - Text */}
         <div className="flex flex-col items-start text-4xl md:text-6xl font-bold leading-snug">

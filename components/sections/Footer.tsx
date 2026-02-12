@@ -43,7 +43,7 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919971047797"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-stone-500 hover:text-primary focus-visible:rounded focus-visible:ring-2 focus-visible:ring-primary"

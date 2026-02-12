@@ -7,7 +7,7 @@ import { CORPORATE_IMAGES } from "@/data/images";
 
 export function CorporateGifting() {
   return (
-    <Section id="corporate">
+    <Section id="corporate" className="md:my-20">
       <div className="grid grid-cols-1 gap-20 lg:gap-8 lg:grid-cols-2 lg:items-center">
         {/* Left: Heading + CTA */}
         <div className="flex flex-col justify-center gap-6">

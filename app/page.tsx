@@ -18,11 +18,11 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <ShopByCategory />
-        <Bestsellers />
         <HowItWorks />
+        <Bestsellers />
+        <CorporateGifting />
         <WhyChoose />
         <AIImageEnhancement />
-        <CorporateGifting />
         <Testimonials />
         <FAQ />
         <Contact />
