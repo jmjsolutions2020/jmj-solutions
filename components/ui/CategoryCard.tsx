@@ -25,10 +25,10 @@ export function CategoryCard({
           <div className="bg-linear-to-t from-black/80 to-transparent absolute w-full h-full pointer-events-none"></div>
 </div>
         <div className="absolute inset-0 flex flex-col items-start justify-between p-4">
-          <div className="inline-flex rounded-lg bg-white/90 px-3 py-1 text-base font-semibold">
+          <div className="inline-flex rounded-lg bg-white px-3 py-1 text-base font-semibold">
             From ₹{startingPrice}
           </div>
-          <div className="inline-flex rounded-[20px] bg-white/90 px-6 py-3 text-sm font-semibold text-stone-900">
+          <div className="w-full text-center rounded-[20px] bg-white px-6 py-3 text-sm font-semibold text-stone-900">
             {description}
           </div>
         </div>

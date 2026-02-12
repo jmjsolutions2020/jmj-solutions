@@ -1,20 +1,13 @@
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
-
-// Decorative icons positioned around the hero
-const HERO_DECORATIONS = [
-  { id: "heart", icon: "❤️", top: "10%", left: "12%", size: "w-8 h-8" },
-  { id: "gift", icon: "🎁", top: "8%", right: "10%", size: "w-10 h-10" },
-  { id: "hand", icon: "✌️", top: "45%", left: "8%", size: "w-10 h-10" },
-  { id: "sparkle", icon: "✨", top: "40%", right: "8%", size: "w-12 h-12" },
-];
+import {HERO_IMAGES} from "@/data/images";
 
 // Showcase gallery images
 const SHOWCASE_IMAGES = [
-  { id: "cushion", src: "/images/hero-cushion.jpg", alt: "Heart-shaped cushion with photo" },
-  { id: "mugs", src: "/images/hero-mugs.jpg", alt: "Personalized mugs display" },
-  { id: "tshirt", src: "/images/hero-tshirt.jpg", alt: "Custom t-shirt showcase" },
+  { id: "Cushion", src: HERO_IMAGES.cushion, alt: "Personalized mugs display" },
+  { id: "Mugs", src: HERO_IMAGES.mugs, alt: "Heart-shaped cushion with photo" },
+  { id: "tshirt", src: HERO_IMAGES.tshirt, alt: "Custom t-shirt showcase" },
 ];
 
 export function Hero() {
@@ -78,8 +71,8 @@ export function Hero() {
                 {SHOWCASE_IMAGES.map((image, index) => (
                   <div
                     key={image.id}
-                    className={`relative shrink-0 rounded-2xl md:rounded-3xl md:shadow-xl shadow-lg ${
-                      index === 1 ? "z-10 w-4/10 aspect-4/5" : "aspect-square w-3/10"
+                    className={`relative shrink-0 rounded-2xl md:rounded-3xl md:shadow-xl aspect-4/5 shadow-lg ${
+                      index === 1 ? "z-10 w-4/10" : "w-3/10"
                     } ${index === 0 ? "md:translate-x-6 translate-x-3" : index === 2 ? "md:-translate-x-6 -translate-x-3" : ""}`}
                   >
                     <Image
@@ -87,7 +80,7 @@ export function Hero() {
                       alt={image.alt}
                       width={300}
                       height={400}
-                      className="w-full h-auto object-cover bg-white/50 backdrop-blur-2xl rounded-3xl"
+                      className="w-full h-full object-cover bg-white/50 backdrop-blur-2xl rounded-3xl"
                     />
                   </div>
                 ))}
