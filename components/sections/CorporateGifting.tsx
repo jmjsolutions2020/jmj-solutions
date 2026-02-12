@@ -51,9 +51,9 @@ function ClientBadges({ count = 10 }: { count?: number }) {
   return (
     <div className="flex items-center gap-1 justify-end pr-2">
       <div className="flex -space-x-1.5">
-        <Image src="/corporate-clients/go-fast-delivery-logo.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
-        <Image src="/corporate-clients/shushruta-genomics-logo.png" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
-        <Image src="/corporate-clients/puja-fashion-logo.jpg" alt="client" width={24} height={24} className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
+        <Image src="/corporate-clients/go-fast-delivery-logo.png" alt="client" width={24} height={24} loading="lazy" className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
+        <Image src="/corporate-clients/shushruta-genomics-logo.png" alt="client" width={24} height={24} loading="lazy" className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
+        <Image src="/corporate-clients/puja-fashion-logo.jpg" alt="client" width={24} height={24} loading="lazy" className="h-6 w-6 rounded-full border border-white shadow-sm bg-white" />
       </div>
       <span className="ml-2 inline-flex items-center rounded-full py-1 text-sm font-semibold">{count}+ corporate clients</span>
     </div>
@@ -73,15 +73,15 @@ function StackedGallery({ mainSrc, thumbTop, thumbBottom, alt = 'Gallery' }: Sta
   return (
     <div className="relative flex flex-col md:flex-row items-start gap-4 md:aspect-video">
       <div className="rounded-2xl overflow-hidden shadow-sm w-full h-full bg-white aspect-5/4 md:aspect-auto">
-        <Image src={mainSrc} alt={`${alt} main`} width={400} height={400} className="h-full w-full object-cover rounded-2xl" />
+        <Image src={mainSrc} alt={`${alt} main`} width={400} height={400} loading="lazy" className="h-full w-full object-cover rounded-2xl" />
       </div>
 
       <div className="flex flex-row md:flex-col gap-4 justify-center w-full h-full md:w-2/6">
         <div className="rounded-xl overflow-hidden shadow-sm h-full w-full">
-          <Image src={thumbTop} alt={`${alt} thumb`} width={144} height={144} className="h-full w-full object-cover grayscale bg-white" />
+          <Image src={thumbTop} alt={`${alt} thumb`} width={144} height={144} loading="lazy" className="h-full w-full object-cover grayscale bg-white" />
         </div>
         <div className="rounded-xl overflow-hidden shadow-sm h-full w-full">
-          <Image src={thumbBottom} alt={`${alt} thumb`} width={144} height={144} className="h-full w-full object-cover grayscale bg-white" />
+          <Image src={thumbBottom} alt={`${alt} thumb`} width={144} height={144} loading="lazy" className="h-full w-full object-cover grayscale bg-white" />
         </div>
       </div>
     </div>

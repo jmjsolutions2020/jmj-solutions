@@ -38,6 +38,7 @@ export function AIImageEnhancement() {
                 src={EXTRA_IMAGES.ai_retouching}
                 alt="AI Image Retouching"
                 fill
+                loading="lazy"
                 className="object-cover w-full h-full scale-105"
               />
             </div>

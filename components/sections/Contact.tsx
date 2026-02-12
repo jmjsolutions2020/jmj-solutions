@@ -65,7 +65,8 @@ export function Contact() {
           </ul>
         </div>
         <div className="rounded-2xl bg-white shadow-sm w-full h-auto md:w-lg">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.6512568666717!2d77.0165408!3d28.490047500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d35574c383%3A0x4b850cfbe71eede8!2sJMJ%20Solutions!5e0!3m2!1sen!2sin!4v1770711038727!5m2!1sen!2sin" width="500" height="350"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.6512568666717!2d77.0165408!3d28.490047500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d35574c383%3A0x4b850cfbe71eede8!2sJMJ%20Solutions!5e0!3m2!1sen!2sin!4v1770711038727!5m2!1sen!2sin" width="500" height="350"  allowFullScreen loading="lazy"
+        title="jmj-solutions-map" referrerPolicy="no-referrer-when-downgrade"
         className="rounded-2xl w-full"></iframe>
         </div>
       </div>

@@ -52,7 +52,7 @@ export function WhyChoose() {
         </ul>
         </div>
         <div className="w-1/3">
-          <Image src={EXTRA_IMAGES.customers} alt="Why choose us" width={300} height={400} className="h-auto w-full object-cover rounded-2xl shadow-sm aspect-3/4 bg-white" />
+          <Image src={EXTRA_IMAGES.customers} alt="Why choose us" width={300} height={400} loading="lazy" className="h-auto w-full object-cover rounded-2xl shadow-sm aspect-3/4 bg-white" />
         </div>
         <div>
           <ul className="grid grid-cols-1 gap-6">
@@ -67,7 +67,7 @@ export function WhyChoose() {
       {/* Mobile layout: Image on top, reasons in a list below */}
       <div className="flex flex-col items-center lg:hidden">
         <div className="px-4 my-10 w-full sm:w-1/2">
-          <Image src={EXTRA_IMAGES.customers} alt="Why choose us" width={400} height={300} className="h-auto w-full object-cover rounded-2xl shadow-sm aspect-3/4 bg-white" />
+          <Image src={EXTRA_IMAGES.customers} alt="Why choose us" width={400} height={300} loading="lazy" className="h-auto w-full object-cover rounded-2xl shadow-sm aspect-3/4 bg-white" />
         </div>
         <ul className="grid grid-cols-1 gap-6">
           {REASONS.map(({ icon, title, text }) => (

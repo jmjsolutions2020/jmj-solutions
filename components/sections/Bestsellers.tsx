@@ -26,7 +26,7 @@ const Bestsellers = () => {
             {
                 PRODUCTS.map(({name, src}) => (
                     <div key={name} className="rounded-full overflow-hidden bg-white shadow-sm hover:shadow-xl w-125 max-w-3xl mb-8 aspect-square hover:scale-105 transition-transform" aria-label={name}>
-                        <Image src={src} alt={name} width={450} height={450} className="w-full h-full object-cover" />
+                        <Image src={src} alt={name} width={450} height={450} loading="lazy" className="w-full h-full object-cover" />
                     </div>
                 ))
             }

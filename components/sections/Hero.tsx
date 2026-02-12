@@ -16,28 +16,28 @@ export function Hero() {
 
       {/* Decorative grid positioned around hero */}
       <div className="absolute top-0 left-0 lg:left-20 pointer-events-none">
-        <Image src={"/grid.svg"} alt="grid" width={500} height={500} className="lg:w-full md:w-8/10 w-1/2 h-auto"></Image>
+        <Image src={"/grid.svg"} alt="grid" width={500} height={500} loading="lazy" className="lg:w-full md:w-8/10 w-1/2 h-auto"></Image>
       </div>
 
       <div className="absolute top-40 -right-50 md:-right-10 lg:right-20 pointer-events-none">
-        <Image src={"/grid.svg"} alt="grid" width={500} height={500} className="lg:w-full md:w-8/10 w-1/2 h-auto"></Image>
+        <Image src={"/grid.svg"} alt="grid" width={500} height={500} loading="lazy" className="lg:w-full md:w-8/10 w-1/2 h-auto"></Image>
       </div>
 
       {/* Decorative elements positioned around hero */}
         <div className="absolute top-10 md:top-1/10 left-5 md:left-1/10 lg:left-1/6 pointer-events-none">
-          <Image src={"/heart.svg"} alt="heart" width={100} height={100} className="lg:w-10 md:w-8 w-6 lg:h-10 md:h-8 h-6"></Image>
+          <Image src={"/heart.svg"} alt="heart" width={100} height={100} loading="lazy" className="lg:w-10 md:w-8 w-6 lg:h-10 md:h-8 h-6"></Image>
         </div>
 
         <div className="absolute top-4/10 md:top-1/3 lg:top-3/10 left-1/10 md:left-2/10 pointer-events-none">
-          <Image src={"/bunny-rabbit.svg"} alt="heart" width={100} height={100} className="lg:w-18 md:w-16 w-12 lg:h-18 md:h-16 h-12"></Image>
+          <Image src={"/bunny-rabbit.svg"} alt="heart" width={100} height={100} loading="lazy" className="lg:w-18 md:w-16 w-12 lg:h-18 md:h-16 h-12"></Image>
         </div>
 
         <div className="absolute top-10 lg:top-1/10 right-0 md:right-1/10 lg:right-1/6 pointer-events-none">
-          <Image src={"/gift.svg"} alt="heart" width={100} height={100} className="lg:w-25 md:w-22 w-16 lg:h-25 md:h-22 h-16"></Image>
+          <Image src={"/gift.svg"} alt="heart" width={100} height={100} loading="lazy" className="lg:w-25 md:w-22 w-16 lg:h-25 md:h-22 h-16"></Image>
         </div>
 
         <div className="absolute top-[35%] md:top-3/10 right-2/10 pointer-events-none">
-          <Image src={"/magic-wand.svg"} alt="heart" width={100} height={100} className="lg:w-12 md:w-10 w-6 lg:h-12 md:h-10 h-6"></Image>
+          <Image src={"/magic-wand.svg"} alt="heart" width={100} height={100} loading="lazy" className="lg:w-12 md:w-10 w-6 lg:h-12 md:h-10 h-6"></Image>
         </div>
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6">
@@ -80,6 +80,7 @@ export function Hero() {
                       alt={image.alt}
                       width={300}
                       height={400}
+                      loading="lazy"
                       className="w-full h-full object-cover bg-white/50 backdrop-blur-2xl rounded-3xl"
                     />
                   </div>
