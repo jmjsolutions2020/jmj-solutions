@@ -29,6 +29,17 @@
   --font-body: var(--font-inter);
   --font-sans: var(--font-inter);
   --font-serif: var(--font-instrument-serif);
+
+  --animate-push: push 1s ease-in-out 4;
+  @keyframes push {
+    0%,
+    100% {
+      transform: translateX(5%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+  }
 }
 
 :root {

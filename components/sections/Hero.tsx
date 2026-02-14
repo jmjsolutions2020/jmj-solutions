@@ -71,7 +71,7 @@ export function Hero() {
                 {SHOWCASE_IMAGES.map((image, index) => (
                   <div
                     key={image.id}
-                    className={`relative shrink-0 rounded-2xl md:rounded-3xl md:shadow-xl aspect-4/5 shadow-lg ${
+                    className={`relative shrink-0 rounded-2xl md:rounded-3xl overflow-hidden md:shadow-xl aspect-4/5 shadow-lg ${
                       index === 1 ? "z-10 w-4/10" : "w-3/10"
                     } ${index === 0 ? "md:translate-x-6 translate-x-3" : index === 2 ? "md:-translate-x-6 -translate-x-3" : ""}`}
                   >
@@ -81,7 +81,7 @@ export function Hero() {
                       width={300}
                       height={400}
                       loading="lazy"
-                      className="w-full h-full object-cover bg-white/50 backdrop-blur-2xl rounded-3xl"
+                      className="w-full h-full object-cover bg-white/50 backdrop-blur-2xl"
                     />
                   </div>
                 ))}
