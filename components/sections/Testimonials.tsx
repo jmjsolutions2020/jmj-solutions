@@ -14,14 +14,14 @@ const TESTIMONIALS = [
   {
     quote:
       "Got a custom cushion with our photo for Mom's birthday. She loved it. Price was reasonable and the print was clear.",
-    author: "Mahak",
+    author: "Mamta K.",
     context: "Customer",
     rating: 5,
   },
   {
     quote:
       "Recently bought a magic mug in which image appears on pouring hot beverages. Really amazed and liked the quality.",
-    author: "Juhi",
+    author: "Nirmala D.",
     context: "Customer",
     rating: 5,
   },
